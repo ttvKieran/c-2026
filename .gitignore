@@ -1,0 +1,36 @@
+# Local editor and agent metadata
+.vscode/
+.agents/
+.codex/
+
+# C/C++ build artifacts
+*.o
+*.obj
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.dSYM/
+a.out
+
+# Common local test binaries / scratch output
+test
+test.exe
+input.txt
+output.txt
+
+# ICPC folders often contain extensionless compiled binaries next to source files.
+# Keep source and notes, ignore generated executables.
+week-*/*
+!week-*/
+!week-*/*.cpp
+!week-*/*.cc
+!week-*/*.cxx
+!week-*/*.c
+!week-*/*.h
+!week-*/*.hpp
+!week-*/*.md
+!week-*/*.txt

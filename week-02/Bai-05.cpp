@@ -22,11 +22,14 @@ int main(){
     // for(int i = 0; i < n; i++){
     //     cout << c[i].first << " " << c[i].second << endl;
     // }
+    ll h1 = (k % (2*M)) * ((k + 1) % (2*M)) / 2 % M;  
+    ll h2 = (k % (2*M)) * ((k - 1) % (2*M)) / 2 % M;
+    h1 = (k * (k + 1) / 2) % M;
+    h2 = (k * (k - 1) / 2) % M;
     ll res = 0;
     for(int i = 0; i < n; i++){
-        ll h1 = k * (k + 1) / 2;
-        ll h2 = k * (k - 1) / 2;
-        res = (res%M + ((c[i].second%M * h1%M)%M + (c[i].first%M * h2%M)%M)%M)%M;
+        res = (res + (c[i].second % M) * h1 % M) % M;
+        res = (res + (c[i].first % M) * h2 % M) % M;
     }
     cout << res;
 }
